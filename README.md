@@ -1,2 +1,3 @@
-# project-shopping-cart
+# Project: Shopping Cart
+
 A mock shopping cart built with React and React Router in accordance with The Odin Project's React Course.
