@@ -10,6 +10,7 @@ const RootLayout = () => {
     const savedCart = sessionStorage.getItem("shopping_cart");
     return savedCart ? JSON.parse(savedCart) : [];
   });
+  const [toast, setToast] = useState(null);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -50,6 +51,8 @@ const RootLayout = () => {
       }
       return [...cart, {...newItem, quantity: amount}];
     });
+
+    showToast(`${newItem.title} added to cart`);
   }
 
   const removeFromCart = (itemId) => {
@@ -74,6 +77,13 @@ const RootLayout = () => {
     });
   }
 
+  const showToast = (message) => {
+    setToast(message);
+    setTimeout(() => {
+      setToast(null);
+    }, 2000);
+  }
+
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
@@ -81,6 +91,13 @@ const RootLayout = () => {
       <header className={styles.rootHeader}>
         <Navbar totalItems={totalItems} />
       </header>
+      {toast && (
+        <div 
+          role="alert" 
+          className={styles.toastNotification}>
+            {toast}
+        </div>
+      )}
       <main className={styles.rootMain}>
         <Outlet context={
           { 

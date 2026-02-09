@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { BrowserRouter, useOutletContext } from "react-router";
-import { test, expect, vi } from "vitest";
+import { vi, expect, test } from "vitest";
 import ShopItem from "./ShopItem";
 
 const mockProduct = { id: 1, name: "Test Item", price: 10 };

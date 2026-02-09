@@ -10,9 +10,27 @@
   grid-area: footer;
   padding: 10px 0;
   color: whitesmoke;
-  background-color: rgb(32, 32, 32);
+  background-color: #333;
   text-align: center;
   a {
     color: whitesmoke;
   }
+}
+
+.toastNotification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: whitesmoke;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: slideIn 0.3s ease-out;
+  z-index: 1;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }

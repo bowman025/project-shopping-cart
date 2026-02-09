@@ -2,7 +2,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { RouterProvider, createMemoryRouter } from "react-router";
 import routes from "../../routes";
-import { expect, test, beforeEach, vi } from "vitest";
+import { vi, expect, test, beforeEach } from "vitest";
 
 vi.unmock('react-router');
 
@@ -48,4 +48,22 @@ test("RootLayout updates sessionStorage when cart changes", async () => {
 	const savedData = JSON.parse(setItemSpy.mock.calls[0][1]);
 
 	expect(savedData.length).toBe(1);
+});
+
+test("shows a toast notification when an item is added", async () => {
+  const user = userEvent.setup();
+  const router = createMemoryRouter(routes, {
+    initialEntries: ["/shop"],
+  });
+  render(<RouterProvider router={router} />);
+  const addButtons = await screen.findAllByRole("button", { name: /add to cart/i });
+  await user.click(addButtons[0]);
+  const toast = await screen.findByRole("alert");
+  
+  expect(toast).toBeInTheDocument();
+  expect(toast).toHaveTextContent(/added to cart/i);
+
+  await waitFor(() => {
+    expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+  }, { timeout: 3000 });
 });
