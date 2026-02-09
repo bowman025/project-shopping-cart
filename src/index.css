@@ -56,3 +56,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* CSS RESET ENDS HERE */
+
+#root {
+  width: 100%;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
