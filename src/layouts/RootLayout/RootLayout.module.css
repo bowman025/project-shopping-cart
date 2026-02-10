@@ -1,9 +1,19 @@
 .rootHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   grid-area: header;
+  display: flex;
+  justify-content: space-evenly;
+  color: whitesmoke;
+  background-image: 
+    linear-gradient(rgb(200, 150, 90), rgb(150, 100, 60));
+  box-shadow: 0 0 20px black;
 }
 
 .rootMain {
   grid-area: main;
+  margin: 50px 100px;
 }
 
 .rootFooter {
@@ -26,7 +36,7 @@
   padding: 12px 24px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  animation: slideIn 0.3s ease-out;
+  animation: slideIn 0.4s ease-out;
   z-index: 1;
 }
 

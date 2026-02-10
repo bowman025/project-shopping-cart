@@ -1,0 +1,48 @@
+h1 a {
+  text-decoration: none;
+  color: #e3e3e3;
+}
+
+.navTitle {
+  margin-top: 12px;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navCart {
+  display: flex;
+  text-decoration: none;
+  color: #e3e3e3;
+  font-size: 3rem;
+  transition: 
+    scale 0.3s ease-out;
+}
+
+.navHome img,
+.navShop img {
+  transition: scale 0.3s ease-out;
+
+}
+
+.navHome img:hover,
+.navShop img:hover,
+.navCart:hover {
+  scale: 1.1;
+}

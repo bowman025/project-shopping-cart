@@ -52,7 +52,7 @@ const RootLayout = () => {
       return [...cart, {...newItem, quantity: amount}];
     });
 
-    showToast(`${newItem.title} added to cart`);
+    showToast(`${amount} ${newItem.title} added to cart`);
   }
 
   const removeFromCart = (itemId) => {

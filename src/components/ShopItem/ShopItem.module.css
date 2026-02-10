@@ -1,0 +1,108 @@
+.itemTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.itemBottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.quantityInput {
+  height: 56px;
+  width: 56px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(68, 48, 68);
+  color: #e3e3e3;
+  text-align: center;
+  font-size: 2rem;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.quantityInput::-webkit-outer-spin-button,
+.quantityInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantityInput:hover {
+  background-color: rgb(148, 98, 148);
+}
+
+.quantityBtns {
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.plusBtn,
+.minusBtn {
+  cursor: pointer;
+  width: 28px;
+  height: 26px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(148, 98, 148);
+  color: #e3e3e3;
+  font-weight: 900;
+}
+
+.plusWrapper,
+.minusWrapper {
+  display: inline-block;
+  transition: transform 0.4s ease;
+  font-size: 28px;
+  translate: 0 -9px;
+}
+
+.plusBtn:hover .plusWrapper,
+.minusBtn:hover .minusWrapper {
+  transform: rotate(180deg);
+}
+
+.addBtn {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  color: #e3e3e3;
+  background-color: rgb(68, 48, 68);
+  transition: scale 0.3s ease-in-out;
+}
+
+.addBtn:hover {
+  background-color: rgb(148, 98, 148);
+  scale: 1.05;
+}

@@ -6,7 +6,7 @@ const Shop = () => {
   const { items, loading } = useOutletContext();
 
   if (loading) {
-    return <div className={styles.loading}>Loading products...</div>
+    return <h1 className={styles.loading}>Loading products...</h1>
   }
 
   return (
@@ -17,7 +17,6 @@ const Shop = () => {
       </div>)}
     </div>
   );
-
 }
 
 export default Shop;
