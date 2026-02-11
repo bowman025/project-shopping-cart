@@ -14,7 +14,6 @@
 
 .rootMain {
   grid-area: main;
-  margin: 50px clamp(20px, 5vw, 100px);
 }
 
 .rootFooter {

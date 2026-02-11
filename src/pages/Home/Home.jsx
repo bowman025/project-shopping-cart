@@ -2,13 +2,24 @@ import styles from "./Home.module.css";
 
 const Home = () => {
   return (
-    <div className={styles.home}>
-      <h1 className={styles.homeWelcome}>Welcome to the Random Store!</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Quod, quos! Quisquam quae saepe, quidem accusamus iusto tempora quam, 
-        doloremque nesciunt minus atque suscipit error nostrum possimus distinctio, 
-        repudiandae sint accusantium!
-      </p>
+    <div className={styles.homeContainer}>
+      <div className={styles.homeColumn}>
+        <div className={styles.homeBckImg1}></div>
+      </div>
+      <div className={styles.homeColumn}>
+        <div className={styles.homeBckImg2}></div>
+      </div>
+      <div className={styles.homeColumn}>
+        <div className={styles.homeBckImg3}></div>
+      </div>
+      <div className={styles.homeColumn}>
+        <div className={styles.homeBckImg4}></div>
+      </div>
+      <div className={styles.homeText}>
+        <h1 className={styles.homeWelcome}>Welcome!</h1>
+        <p className={styles.homeParagraph}>Please take your time exploring our carefully curated selection of products.<br /> There are 20 of them, if you can believe it!
+        </p>
+      </div>
     </div>
   );
 }
