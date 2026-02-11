@@ -81,7 +81,7 @@ const RootLayout = () => {
     setToast(message);
     setTimeout(() => {
       setToast(null);
-    }, 2000);
+    }, 1000);
   }
 
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);

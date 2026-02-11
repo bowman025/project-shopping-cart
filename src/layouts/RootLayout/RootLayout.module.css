@@ -4,23 +4,24 @@
   z-index: 1;
   grid-area: header;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   color: whitesmoke;
   background-image: 
-    linear-gradient(rgb(200, 150, 90), rgb(150, 100, 60));
+    linear-gradient(rgba(118, 78, 118, 0.9), rgba(68, 48, 68, 0.9));
   box-shadow: 0 0 20px black;
 }
 
 .rootMain {
   grid-area: main;
-  margin: 50px 100px;
+  margin: 50px clamp(20px, 5vw, 100px);
 }
 
 .rootFooter {
   grid-area: footer;
   padding: 10px 0;
   color: whitesmoke;
-  background-color: #333;
+  background-color: rgba(0,0,0,0.5);
   text-align: center;
   a {
     color: whitesmoke;
@@ -31,7 +32,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #333;
+  background-color: rgba(0,0,0,0.7);
   color: whitesmoke;
   padding: 12px 24px;
   border-radius: 8px;
